@@ -3,9 +3,32 @@ aqui estaran los trabajos del ejercicio individual 1 del modulo 5
 
 ## 2.- Para comenzar este proceso, en este primer ejercicio se solicitará instalar MySQL en un entorno local. Asumiendo que ya está instalado el aplicativo, se pide hacer lo siguiente:
 
-- Crea un usuario llamado “explorador”, la clave la defines tú.
+## Crea un usuario llamado “explorador”, la clave la defines tú. Abre la terminal integrada de VSC presionando Ctrl+` (Windows/Linux) o Cmd+` (macOS). Conéctate a tu servidor MySQL como usuario root usando el comando mysql. Por ejemplo:
 
-![usuario explorador](./src/img/)
+```sql
+  mysql -u root -p
+```
+
+Se te pedirá que ingreses la contraseña del usuario root.
+
+## Una vez que estés conectado a tu servidor MySQL como usuario root, puedes crear una nueva base de datos usando el comando CREATE DATABASE. Por ejemplo, para crear una base de datos llamada “mi_base_de_datos”, puedes usar el siguiente comando:
+
+```sql
+  CREATE DATABASE carlos_db;
+
+```
+
+## Después de crear la base de datos, puedes crear un nuevo usuario y otorgarle permisos para acceder a la base de datos. Para hacerlo, puedes usar los comandos CREATE USER y GRANT. Por ejemplo, para crear un usuario llamado “mi_usuario” con contraseña “mi_contraseña” y otorgarle permisos para realizar todas las acciones en la base de datos “mi_base_de_datos”, puedes usar los siguientes comandos:
+
+```sql
+  CREATE USER 'explorador'@'localhost' IDENTIFIED BY 'explorador';
+  GRANT ALL PRIVILEGES ON carlos_db.* TO 'explorador'@'localhost';
+  FLUSH PRIVILEGES;
+
+
+```
+
+![usuario explorador](./src/img/crear_usuario.png)
 
 - Al usuario recién creado, asígnale permisos de lectura, escritura en todas las tablas que existan en la
 base de datos con nombre “world” (esta es una base de muestra creada al momento de instalar
