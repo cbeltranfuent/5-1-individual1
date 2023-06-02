@@ -5,6 +5,8 @@ aqui estaran los trabajos del ejercicio individual 1 del modulo 5
 
 - Crea un usuario llamado “explorador”, la clave la defines tú.
 
+![usuario explorador](./src/img/)
+
 - Al usuario recién creado, asígnale permisos de lectura, escritura en todas las tablas que existan en la
 base de datos con nombre “world” (esta es una base de muestra creada al momento de instalar
 MySQL).
